@@ -1,0 +1,62 @@
+1. Tujuan 
+memahamim cara menyelesaikan Sitem Persamaan Linear Tiga Variabel(SPLTV) 
+menetukan nilai variabel X,Y, dan Z dari tiga persamaan linear
+menerapkan metode Eliminasi Gaus dalam penyelesaian persoalan matematika
+mengimplementasikan algoritma penyelesaian SPLTV menggunakan bahasa pemrogaman  Phyton
+mempermudah proses perhitungan agar lebih cepat,sistematis,dan efisien
+2. Bentuk Umum
+Bentuk Umum Sistem Persamaan Linear Tiga Variabel adalah
+a₁x + b₁y + c₁z = d₁
+a₂x + b₂y + c₂z = d₂
+a₃x + b₃y + c₃z = d₃
+Keterangan:
+•	X, Y, dan Z adalah variabel yang nilainya akan dicari.
+•	a, b, dan c adalah koefisien dari masing-masing variabel.
+•	d adalah konstanta pada setiap persamaan.
+3. Contoh Soal
+Diketahui sistem persamaan linear tiga variabel berikut:
+x + y + z = 6
+2x + y + z = 8
+x + 2y + z = 9
+Tentukan nilai X, Y, dan Z menggunakan metode Eliminasi Gauss.
+4. Langkah-Langkah penyelesaian
+Langkah 1: Membentuk matriks augmented
+Koefisien dan konstanta dari ketiga persamaan disusun menjadi matriks augmented:
+[ 1   1   1 | 6 ]
+[ 2   1   1 | 8 ]
+[ 1   2   1 | 9 ]
+Langkah 2: Eliminasi variabel X
+Baris kedua dikurangi 2 kali baris pertama (B,₃ ← B₃ + B₂).Hasil matriks segitiga atas:
+[ 1   1   1 |  6 ]
+[ 0  -1  -1 | -4 ]
+[ 0   0  -1 | -1 ]
+Langkah-Langkah 3: Elimanisi variabel Y
+Baris ketiga ditambah baris kedua (B₃ ← B₃ + B₂). Hasil matriks segitiga atas:
+[ 1   1   1 |  6 ]
+[ 0  -1  -1 | -4 ]
+[ 0   0  -1 | -1 ]
+Langkah 4: Subtitusi mundur
+Dari baris ketiga: −z = −1, sehingga z=1
+Dari baris kedua: -y -z =-4.suntitusi z=1 menghasilkan -y -1=-4,sehingga y=3.
+dari baris pertama: x+y+z=6.suntitusi y=3 dan z=1 menghasilkan x+3+1=6 sehingga x=2.
+5.Algoritma(pseudocode)
+MULAI
+INPUT koefisen X, Y, Z dan konstanta dari 3 persamaan
+ BENTUK matriks augmented berukuran 3x4
+ UNTUK setiap kolom pivot:
+ PILIH baris dengan nilai pivot absolut terbesar
+ TUKAR baris pivot ke posisi yang sesuai
+ JIKA pivot mendekati nol:
+   PERIKSA apakah sistem tidak memiliki solusi atau memiliki solusi tak hingga  
+    LAKUKAN eliminasi pada baris di baeah pivot
+ LAKUKAN subtitusi mundur
+ HITUNG nilai X, Y, dan Z
+ TAMPILKAN hasil perhiitungan 
+SELESAI
+Hasil Perhitungan
+Berdasarkan proses eliminasi Gauss dan suntitusi mundur,di peroleh hasil:
+Variabel X	Variabel Y	Variabel Z
+   2            3           1
+jadi solusi dari sistem persamaan tersebut adalah X=2,Y=3 dan Z=1
+
+
